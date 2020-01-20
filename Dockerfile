@@ -1,4 +1,4 @@
-FROM alpine:3.11.2
+FROM alpine:3.11.3
 LABEL website="Secure Docker Images https://secureimages.dev"
 LABEL description="We secure your business from scratch."
 LABEL maintainer="hireus@secureimages.dev"
@@ -9,9 +9,6 @@ ARG JIRA_PRODUCT=jira-software
 ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US:en' \
     LC_ALL='en_US.UTF-8'
-
-# Fixing CVE-2019-1551
-RUN apk add --no-cache --upgrade openssl
 
 RUN apk add --no-cache --virtual .build-deps curl binutils ;\
     GLIBC_VER="2.30-r0" ;\
