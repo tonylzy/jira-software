@@ -3,7 +3,7 @@ LABEL website="Secure Docker Images https://secureimages.dev"
 LABEL description="We secure your business from scratch."
 LABEL maintainer="hireus@secureimages.dev"
 
-ARG JIRA_VERSION=8.6.1
+ARG JIRA_VERSION=8.7.0
 ARG JIRA_PRODUCT=jira-software
 
 ENV LANG='en_US.UTF-8' \
