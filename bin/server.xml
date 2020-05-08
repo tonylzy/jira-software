@@ -63,9 +63,6 @@
         acceptCount="100"
         disableUploadTimeout="true"
         bindOnInit="false"
-        proxyName="jira.distributordd.com"
-        proxyPort="443"
-        scheme="https"
     />
 
         <!--
