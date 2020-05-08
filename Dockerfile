@@ -86,7 +86,9 @@ ENV JIRA_USER=jira \
     JRE_HOME=$JAVA_HOME \
     _RUNJAVA=java
 
-COPY bin $JIRA_SCRIPTS
+COPY bin $JIRA_SCRIPTS 
+
+RUN chmod +x $JIRA_SCRIPTS/*
 
 WORKDIR /tmp
 
@@ -178,8 +180,6 @@ RUN wget -O jira.bin https://www.atlassian.com/software/jira/downloads/binary/at
 USER $JIRA_USER
 
 WORKDIR $JIRA_HOME
-
-VOLUME ["$JIRA_HOME"]
 
 EXPOSE 8080
 
